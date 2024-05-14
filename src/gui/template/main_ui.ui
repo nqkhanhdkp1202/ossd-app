@@ -6,55 +6,146 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>689</width>
-    <height>522</height>
+    <width>665</width>
+    <height>626</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Fancy App </string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QWidget" name="horizontalLayoutWidget">
+   <widget class="QGroupBox" name="verticalGroupBox">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
     <property name="geometry">
      <rect>
       <x>20</x>
       <y>20</y>
-      <width>651</width>
-      <height>441</height>
+      <width>621</width>
+      <height>561</height>
      </rect>
     </property>
-    <layout class="QHBoxLayout" name="horizontalLayout">
-     <property name="spacing">
-      <number>0</number>
-     </property>
-     <property name="sizeConstraint">
-      <enum>QLayout::SetMaximumSize</enum>
-     </property>
+    <layout class="QVBoxLayout" name="verticalLayout_4">
      <item>
-      <widget class="QGroupBox" name="verticalGroupBox">
-       <layout class="QVBoxLayout" name="verticalLayout_4">
-        <item>
-         <widget class="QLabel" name="label">
-          <property name="text">
-           <string>TextLabel</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QPushButton" name="browseBtn">
-          <property name="text">
-           <string>Browse Image</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QPushButton" name="pushButton_2">
-          <property name="text">
-           <string>Predict Emotion</string>
-          </property>
-         </widget>
-        </item>
-       </layout>
+      <widget class="QLabel" name="label">
+       <property name="text">
+        <string>TextLabel</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout_3">
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_5">
+         <item>
+          <widget class="QLabel" name="label_2">
+           <property name="text">
+            <string>Emotions and Gender
+- Predictable Emotions: Surprise, Fear, Disgust, Happiness, Sadness, Anger, Neutral.
+- Genders: Female, Male.</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QProgressBar" name="pBar">
+           <property name="value">
+            <number>0</number>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="resultLabel">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>2000000</width>
+             <height>50</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>13</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Result is: </string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_4">
+         <item>
+          <widget class="QRadioButton" name="radioButton_3">
+           <property name="text">
+            <string>RadioButton</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QRadioButton" name="radioButton_2">
+           <property name="text">
+            <string>RadioButton</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QRadioButton" name="radioButton">
+           <property name="text">
+            <string>RadioButton</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <widget class="QPushButton" name="browseBtn">
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="text">
+        <string>Browse Image</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="predictBtn">
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="text">
+        <string>Predict Emotion</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="errorLabel">
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>32</height>
+        </size>
+       </property>
+       <property name="cursor">
+        <cursorShape>ArrowCursor</cursorShape>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="textFormat">
+        <enum>Qt::AutoText</enum>
+       </property>
       </widget>
      </item>
     </layout>
@@ -65,18 +156,19 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>689</width>
-     <height>24</height>
+     <width>665</width>
+     <height>22</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuEmotion_Classification">
     <property name="title">
-     <string>Emotion Classification</string>
+     <string>Option</string>
     </property>
     <addaction name="actionBrowse_Image"/>
     <addaction name="actionChoose_Model"/>
     <addaction name="actionClose_app"/>
     <addaction name="separator"/>
+    <addaction name="actionQuit"/>
    </widget>
    <widget class="QMenu" name="menuHistory">
     <property name="title">
@@ -97,7 +189,7 @@
   <widget class="QStatusBar" name="statusbar"/>
   <action name="actionBrowse_Image">
    <property name="text">
-    <string>Browse Image</string>
+    <string>Emotion Classification</string>
    </property>
   </action>
   <action name="actionQuit_2">
@@ -107,7 +199,7 @@
   </action>
   <action name="actionChoose_Model">
    <property name="text">
-    <string>Choose Model</string>
+    <string>Gender Identities</string>
    </property>
   </action>
   <action name="actionExit">
@@ -117,7 +209,7 @@
   </action>
   <action name="actionClose_app">
    <property name="text">
-    <string>Close</string>
+    <string>Handwriting Detection</string>
    </property>
   </action>
   <action name="actionHistory_Predict">
@@ -128,6 +220,11 @@
   <action name="actionAbout_us">
    <property name="text">
     <string>About us</string>
+   </property>
+  </action>
+  <action name="actionQuit">
+   <property name="text">
+    <string>Quit</string>
    </property>
   </action>
  </widget>
