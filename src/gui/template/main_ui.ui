@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>689</width>
+    <height>522</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QWidget" name="horizontalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>20</y>
+      <width>651</width>
+      <height>441</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <property name="spacing">
+      <number>0</number>
+     </property>
+     <property name="sizeConstraint">
+      <enum>QLayout::SetMaximumSize</enum>
+     </property>
+     <item>
+      <widget class="QGroupBox" name="verticalGroupBox">
+       <layout class="QVBoxLayout" name="verticalLayout_4">
+        <item>
+         <widget class="QLabel" name="label">
+          <property name="text">
+           <string>TextLabel</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="browseBtn">
+          <property name="text">
+           <string>Browse Image</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButton_2">
+          <property name="text">
+           <string>Predict Emotion</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>689</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuEmotion_Classification">
+    <property name="title">
+     <string>Emotion Classification</string>
+    </property>
+    <addaction name="actionBrowse_Image"/>
+    <addaction name="actionChoose_Model"/>
+    <addaction name="actionClose_app"/>
+    <addaction name="separator"/>
+   </widget>
+   <widget class="QMenu" name="menuHistory">
+    <property name="title">
+     <string>History</string>
+    </property>
+    <addaction name="actionHistory_Predict"/>
+   </widget>
+   <widget class="QMenu" name="menuAbout">
+    <property name="title">
+     <string>About</string>
+    </property>
+    <addaction name="actionAbout_us"/>
+   </widget>
+   <addaction name="menuEmotion_Classification"/>
+   <addaction name="menuHistory"/>
+   <addaction name="menuAbout"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionBrowse_Image">
+   <property name="text">
+    <string>Browse Image</string>
+   </property>
+  </action>
+  <action name="actionQuit_2">
+   <property name="text">
+    <string>Quit</string>
+   </property>
+  </action>
+  <action name="actionChoose_Model">
+   <property name="text">
+    <string>Choose Model</string>
+   </property>
+  </action>
+  <action name="actionExit">
+   <property name="text">
+    <string>Exit</string>
+   </property>
+  </action>
+  <action name="actionClose_app">
+   <property name="text">
+    <string>Close</string>
+   </property>
+  </action>
+  <action name="actionHistory_Predict">
+   <property name="text">
+    <string>History Predict</string>
+   </property>
+  </action>
+  <action name="actionAbout_us">
+   <property name="text">
+    <string>About us</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
