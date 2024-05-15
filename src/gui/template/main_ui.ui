@@ -6,15 +6,15 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>665</width>
-    <height>626</height>
+    <width>687</width>
+    <height>675</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Fancy App </string>
   </property>
-  <widget class="QWidget" name="centralwidget">
-   <widget class="QGroupBox" name="verticalGroupBox">
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QGroupBox" name="emotionGroupBox">
     <property name="enabled">
      <bool>true</bool>
     </property>
@@ -28,7 +28,7 @@
     </property>
     <layout class="QVBoxLayout" name="verticalLayout_4">
      <item>
-      <widget class="QLabel" name="label">
+      <widget class="QLabel" name="emotionImage">
        <property name="text">
         <string>TextLabel</string>
        </property>
@@ -39,7 +39,7 @@
        <item>
         <layout class="QVBoxLayout" name="verticalLayout_5">
          <item>
-          <widget class="QLabel" name="label_2">
+          <widget class="QLabel" name="emotionLabel">
            <property name="text">
             <string>Emotions and Gender
 - Predictable Emotions: Surprise, Fear, Disgust, Happiness, Sadness, Anger, Neutral.
@@ -48,14 +48,14 @@
           </widget>
          </item>
          <item>
-          <widget class="QProgressBar" name="pBar">
+          <widget class="QProgressBar" name="emotionPBar">
            <property name="value">
             <number>0</number>
            </property>
           </widget>
          </item>
          <item>
-          <widget class="QLabel" name="resultLabel">
+          <widget class="QLabel" name="emotionResultLabel">
            <property name="sizePolicy">
             <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
              <horstretch>0</horstretch>
@@ -85,23 +85,19 @@
        <item>
         <layout class="QHBoxLayout" name="horizontalLayout_4">
          <item>
-          <widget class="QRadioButton" name="radioButton_3">
+          <widget class="QRadioButton" name="cnnRadio">
            <property name="text">
-            <string>RadioButton</string>
+            <string>CNN Model</string>
+           </property>
+           <property name="checked">
+            <bool>true</bool>
            </property>
           </widget>
          </item>
          <item>
-          <widget class="QRadioButton" name="radioButton_2">
+          <widget class="QRadioButton" name="xceptionRadio">
            <property name="text">
-            <string>RadioButton</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QRadioButton" name="radioButton">
-           <property name="text">
-            <string>RadioButton</string>
+            <string>Xception Model</string>
            </property>
           </widget>
          </item>
@@ -110,7 +106,7 @@
       </layout>
      </item>
      <item>
-      <widget class="QPushButton" name="browseBtn">
+      <widget class="QPushButton" name="emotionBrowseBtn">
        <property name="cursor">
         <cursorShape>PointingHandCursor</cursorShape>
        </property>
@@ -120,7 +116,7 @@
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="predictBtn">
+      <widget class="QPushButton" name="emotionPredictBtn">
        <property name="cursor">
         <cursorShape>PointingHandCursor</cursorShape>
        </property>
@@ -130,7 +126,230 @@
       </widget>
      </item>
      <item>
-      <widget class="QLabel" name="errorLabel">
+      <widget class="QLabel" name="emotionErrorLabel">
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>32</height>
+        </size>
+       </property>
+       <property name="cursor">
+        <cursorShape>ArrowCursor</cursorShape>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="textFormat">
+        <enum>Qt::AutoText</enum>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QGroupBox" name="animalGroupBox">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>20</y>
+      <width>621</width>
+      <height>561</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_6">
+     <item>
+      <widget class="QLabel" name="animalImage">
+       <property name="text">
+        <string>TextLabel</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout_7">
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_8">
+         <item>
+          <widget class="QLabel" name="animalLabel">
+           <property name="text">
+            <string>Animals
+- Predictable Animal Classes: Bird, Cat, Deer, Dog, Frog, Horse.</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QProgressBar" name="animalPBar">
+           <property name="value">
+            <number>0</number>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="animalResultLabel">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>2000000</width>
+             <height>50</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>13</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Result is: </string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <widget class="QPushButton" name="animalBrowseBtn">
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="text">
+        <string>Browse Image</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="animalPredictBtn">
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="text">
+        <string>Predict Animal</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="animalErrorLabel">
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>32</height>
+        </size>
+       </property>
+       <property name="cursor">
+        <cursorShape>ArrowCursor</cursorShape>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="textFormat">
+        <enum>Qt::AutoText</enum>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QGroupBox" name="numberGroupBox">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>20</y>
+      <width>621</width>
+      <height>561</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_13">
+     <item>
+      <widget class="QLabel" name="numberImage">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="text">
+        <string>TextLabel</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout_14">
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_15">
+         <item>
+          <widget class="QLabel" name="numberLabel">
+           <property name="text">
+            <string>Numerical Classes
+- Digits Recognizable: Zero, One, Two, Three, Four, Five, Six, Seven, Eight, Nine, Ten.</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QProgressBar" name="numberPBar">
+           <property name="value">
+            <number>0</number>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="numberResultLabel">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>2000000</width>
+             <height>50</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>13</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Result is: </string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <widget class="QPushButton" name="numberBrowseBtn">
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="text">
+        <string>Browse Image</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="numberPredictBtn">
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="text">
+        <string>Predict Number</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="numberErrorLabel">
        <property name="maximumSize">
         <size>
          <width>16777215</width>
@@ -156,7 +375,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>665</width>
+     <width>687</width>
      <height>22</height>
     </rect>
    </property>
@@ -164,32 +383,18 @@
     <property name="title">
      <string>Option</string>
     </property>
-    <addaction name="actionBrowse_Image"/>
-    <addaction name="actionChoose_Model"/>
-    <addaction name="actionClose_app"/>
+    <addaction name="emoitonQAction"/>
+    <addaction name="animalQAction"/>
+    <addaction name="numericalQAction"/>
     <addaction name="separator"/>
     <addaction name="actionQuit"/>
    </widget>
-   <widget class="QMenu" name="menuHistory">
-    <property name="title">
-     <string>History</string>
-    </property>
-    <addaction name="actionHistory_Predict"/>
-   </widget>
-   <widget class="QMenu" name="menuAbout">
-    <property name="title">
-     <string>About</string>
-    </property>
-    <addaction name="actionAbout_us"/>
-   </widget>
    <addaction name="menuEmotion_Classification"/>
-   <addaction name="menuHistory"/>
-   <addaction name="menuAbout"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
-  <action name="actionBrowse_Image">
+  <action name="emoitonQAction">
    <property name="text">
-    <string>Emotion Classification</string>
+    <string>Emotion &amp; Gender Classification</string>
    </property>
   </action>
   <action name="actionQuit_2">
@@ -197,9 +402,9 @@
     <string>Quit</string>
    </property>
   </action>
-  <action name="actionChoose_Model">
+  <action name="animalQAction">
    <property name="text">
-    <string>Gender Identities</string>
+    <string>Animals Identities</string>
    </property>
   </action>
   <action name="actionExit">
@@ -207,9 +412,9 @@
     <string>Exit</string>
    </property>
   </action>
-  <action name="actionClose_app">
+  <action name="numericalQAction">
    <property name="text">
-    <string>Handwriting Detection</string>
+    <string>Numerical Classification</string>
    </property>
   </action>
   <action name="actionHistory_Predict">
