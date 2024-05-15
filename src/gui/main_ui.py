@@ -1,31 +1,31 @@
 from PyQt5.QtWidgets import *
 from PyQt5 import uic, QtGui
-from src.bus.browse_image import browse_image
-from src.bus.predict_emotion import predict_cnn_emotion, predict_xception_emotion
-from src.bus.predict_animals import predict_cnn_animal
-from src.bus.predict_handwriting_digit import predict_cnn_handwriting
-from src.common.constants import get_array_labels, get_models_path
+from bus.browse_image import browse_image
+from bus.predict_emotion import predict_cnn_emotion, predict_xception_emotion
+from bus.predict_gender import predict_cnn_gender
+from bus.predict_animals import predict_cnn_animal
+from bus.predict_handwriting_digit import predict_cnn_handwriting
+from common.constants import get_array_labels, get_models_path
 import time
-
 
 class MainGUI(QMainWindow):
     def __init__(self):
         super(MainGUI, self).__init__()
-        uic.loadUi("./gui/template/main_ui.ui", self)
+        uic.loadUi("src/gui/template/main_ui.ui", self) 
         self.show()
         self.setFixedSize(self.size())
         self.emotion_image_filename = ""
         self.emotion_result = ""
-        self.emotion_current_file = "./assets/faces-675-675x394.jpeg"
+        self.emotion_current_file = "src/assets/faces-675-675x394.jpeg"
         emotion_pixmap = QtGui.QPixmap(self.emotion_current_file)
         emotion_pixmap = emotion_pixmap.scaled(self.width(), self.height())
         self.emotionImage.setPixmap(emotion_pixmap)
         self.emotionImage.setMinimumSize(1, 1)
         self.emotionBrowseBtn.clicked.connect(self.get_image_emotion)
-        self.emotionPredictBtn.clicked.connect(self.predict_emotion)
+        self.emotionPredictBtn.clicked.connect(self.predict_emotion_gender)
         self.animal_image_filename = ""
         self.animal_result = ""
-        self.animal_current_file = "./assets/animal-classification-stickers-2.jpg"
+        self.animal_current_file = "src/assets/animal-classification-stickers-2.jpg"
         animal_pixmap = QtGui.QPixmap(self.animal_current_file)
         animal_pixmap = animal_pixmap.scaled(self.width(), self.height())
         self.animalImage.setPixmap(animal_pixmap)
@@ -34,7 +34,7 @@ class MainGUI(QMainWindow):
         self.animalPredictBtn.clicked.connect(self.predict_animal)
         self.number_image_filename = ""
         self.number_result = ""
-        self.number_current_file = "./assets/MnistExamplesModified.png"
+        self.number_current_file = "src/assets/MnistExamplesModified.png"
         number_pixmap = QtGui.QPixmap(self.number_current_file)
         number_pixmap = number_pixmap.scaled(self.width(), self.height())
         self.numberImage.setPixmap(number_pixmap)
@@ -98,7 +98,7 @@ class MainGUI(QMainWindow):
             print(e)
             self.emotionErrorLabel.setText(e.__str__())
 
-    def predict_emotion(self):
+    def predict_emotion_gender(self):
         try:
             if self.isSelectedCnn:
                 self.emotion_result = predict_cnn_emotion(self.emotion_image_filename)
@@ -106,14 +106,15 @@ class MainGUI(QMainWindow):
                 for i in range(101):
                     time.sleep(0.01)
                     self.emotionPBar.setValue(i)
-                    self.emotionResultLabel.setText(self.emotion_result)
             if self.isSelectedXception:
                 self.emotion_result = predict_xception_emotion(self.emotion_image_filename)
                 # setting for loop to set value of progress bar
                 for i in range(101):
                     time.sleep(0.01)
                     self.emotionPBar.setValue(i)
-                self.emotionResultLabel.setText(self.emotion_result)
+
+            genderResult = predict_cnn_gender(self.emotion_image_filename)
+            self.emotionResultLabel.setText(self.emotion_result + genderResult)
 
         except Exception as e:
             print(e)

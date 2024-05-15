@@ -5,9 +5,9 @@ import numpy as np
 import os.path
 
 # Load the saved model
-base_dir = dirname(realpath(__file__))
-model_path_cnn = 'models/cnn-animals.h5'
-model_path_exception = 'models/xception_299x299_rbg_fer2013_32bs_50epochs.h5'
+base_dir = dirname(__file__)
+model_path_cnn = join(base_dir, "..", "models", "cnn-emotion.h5")
+model_path_exception = join(base_dir, "..", "models", "xception-emotion.h5")
 
 model_cnn = load_model(model_path_cnn)
 model_exception = load_model(model_path_exception)

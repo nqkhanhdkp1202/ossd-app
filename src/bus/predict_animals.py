@@ -3,10 +3,14 @@ from PIL import Image
 import numpy as np
 from os.path import join, dirname, realpath
 
+
 # Load the saved model
-base_dir = dirname(realpath(__file__))  # Gets the directory where the script is located
-model_path_cnn = 'models/cnn-animals.h5'
+base_dir = dirname(__file__)  # Gets the directory where the script is located
+
+model_path_cnn = join(base_dir, "..", "models", "cnn-animals.h5")
 model_cnn = load_model(model_path_cnn)
+
+
 
 results = {
     0: 'bird',

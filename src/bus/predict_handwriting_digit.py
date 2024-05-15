@@ -6,7 +6,7 @@ from os.path import join, dirname, realpath
 
 # Load the saved model
 base_dir = dirname(realpath(__file__))  # Gets the directory where the script is located
-model_path = 'models/cnn-handwritten-digits.h5'
+model_path = join(base_dir, "..", "models", "cnn-handwritten-digits.h5")
 model = load_model(model_path)
 
 # Define class labels
