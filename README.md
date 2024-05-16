@@ -24,7 +24,7 @@ python --version
 ```
 **Bước 2: Cài đặt ứng dụng**
 
-- Tải mã nguồn phần mềm tại đây: [github.com/nqkhanhdkp1202]([https://github.com/nqkhanhdkp1202/ossd-app?](https://github.com/nqkhanhdkp1202/ossd-app/releases/tag/v1.0)fbclid=IwZXh0bgNhZW0CMTAAAR1oT69DHlpfXQ_ZBewpHr2QSpEXxgLla1MpGiQDPufiLuGu4U8i6BthBkI_aem_Aal9qx9GzriafaqWG6t5XlNST09xtQyphsHufXG2a3R2fuPey0O_FhujEjRSu8q-o7Ge2k0-zu54qKrX1ER_uw6R)
+- Tải mã nguồn phần mềm tại đây: [github.com/nqkhanhdkp1202](https://github.com/nqkhanhdkp1202/ossd-app/releases/tag/v1.0)
 - sau khi tải về ta thực hiện giải nén và mở file đó ở ví dụ này ta sẽ thực hiện trên
 visual studio code
 - Ta thực hiện dowload các model để sử dụng về trong phần mềm ở link sau: [model](https://drive.google.com/drive/folders/1ipZDhCQzeEFSN3ruRVybYqPG1uyLIryA?usp=sharing )
