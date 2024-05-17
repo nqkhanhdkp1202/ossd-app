@@ -3,6 +3,8 @@
 
 Phần mềm sẽ có một cửa sổ ứng dụng hiện lên sau khi kích hoạt ứng dụng, người dùng phần mềm có thể chọn các mục mà mình muốn sử dụng nhận dạng. Ở từng mục chức năng sẽ có những yêu cầu mà người dùng cần thực hiện đúng thì mới sử dụng được như là nhập vào hình ảnh,... Khi đã làm đúng theo các bước thì phần mềm sẽ xử lý và trả ra kết quả lên màn hình cho người xem.
 
+Tài liệu báo cáo môn học: https://www.overleaf.com/2882733544yqjpdwrygxfc#cee864
+
 Phần mềm sẽ có những chức năng chính như sau:
 
 - Nhận dạng cảm xúc trên khuôn mặt.
