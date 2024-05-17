@@ -3,7 +3,7 @@
 
 Phần mềm sẽ có một cửa sổ ứng dụng hiện lên sau khi kích hoạt ứng dụng, người dùng phần mềm có thể chọn các mục mà mình muốn sử dụng nhận dạng. Ở từng mục chức năng sẽ có những yêu cầu mà người dùng cần thực hiện đúng thì mới sử dụng được như là nhập vào hình ảnh,... Khi đã làm đúng theo các bước thì phần mềm sẽ xử lý và trả ra kết quả lên màn hình cho người xem.
 
-Tài liệu báo cáo môn học: https://www.overleaf.com/2882733544yqjpdwrygxfc#cee864
+Tài liệu báo cáo môn học: https://trello.com/1/cards/662c588a8c7588cf1aadd45c/attachments/6646402ab345fe7698e40061/download/BaoCaoOSSD_-_Nhom25.pdf
 
 Phần mềm sẽ có những chức năng chính như sau:
 
