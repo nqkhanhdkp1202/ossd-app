@@ -45,7 +45,7 @@ Set-ExecutionPolicy RemoteSigned
 ```
 - Khi đã thực hiện thành công các bước trên ta cần chạy thêm câu lệnh sau trong terminal:
 ```bash
- install tensorflow pillow
+pip install tensorflow pillow
 ```
 - Tiếp theo chạy lệnh:
 ```bash
